@@ -4,6 +4,7 @@ function tellTime() {
   let currentMinutes = currentTime.getMinutes();
 
   timeIntoWords(currentHours, currentMinutes);
+  console.log(currentHours, currentMinutes);
 }
 
 tellTime();
@@ -11,6 +12,8 @@ setInterval(tellTime, 60000);
 
 function timeIntoWords(hours, minutes) {
   if (minutes >= 33) hours++;
+
+  document.querySelector(`._${hours - 1}`).classList.remove("active");
   document.querySelector(`._${hours}`).classList.add("active");
 
   if (minutes >= 33 && minutes < 57)
@@ -45,5 +48,4 @@ function timeIntoWords(hours, minutes) {
     document.querySelector(`.five`).classList.add("active");
     document.querySelector(`.minutes`).classList.add("active");
   }
-  console.log(hours, minutes);
 }
