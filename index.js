@@ -11,9 +11,18 @@ tellTime();
 setInterval(tellTime, 60000);
 
 function timeIntoWords(hours, minutes) {
+  let active = document.querySelectorAll(".active");
+
+  function removeClasses(els) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList.remove("active");
+    }
+  }
+
+  removeClasses(active);
+
   if (minutes >= 33) hours++;
 
-  document.querySelector(`._${hours - 1}`).classList.remove("active");
   document.querySelector(`._${hours}`).classList.add("active");
 
   if (minutes >= 33 && minutes < 57)
