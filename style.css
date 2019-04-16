@@ -1,24 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
+:root {
+  --active-color: magenta;
+}
+
 html {
   font-size: 16px;
-  background: #222222;
+  background: #111111;
   color: white;
+  font-family: "Righteous", cursive;
 }
 
 .time {
-  color: grey;
-  font-family: serif;
+  color: #2d2d2b;
   font-size: 4vw;
   margin: auto;
 }
 
 .active {
-  color: magenta;
+  color: var(--active-color);
   font-size: 5vw;
+  transition: text-shadow 3s;
+  text-shadow: 0 0 5px grey;
 }
 
 .always-active {
-  color: magenta;
+  color: var(--active-color);
   font-size: 5vw;
+  text-shadow: 0 0 5px grey;
 }
 
 .clock {

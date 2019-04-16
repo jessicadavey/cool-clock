@@ -31,7 +31,7 @@ function timeIntoWords(hours, minutes) {
   if (minutes >= 27 && minutes < 33)
     document.querySelector(`.half`).classList.add("active");
 
-  if (minutes >= 57 && minutes < 3)
+  if (minutes >= 57 || minutes < 3)
     document.querySelector(`.oclock`).classList.add("active");
 
   if ((minutes >= 33 && minutes < 37) || (minutes >= 23 && minutes < 27)) {
