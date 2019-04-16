@@ -61,3 +61,11 @@ function timeIntoWords(hours, minutes) {
 
 tellTime();
 setInterval(tellTime, 60000);
+
+const buttons = document.querySelectorAll(".color");
+
+buttons.forEach(button => button.addEventListener("click", changeColor));
+
+function changeColor() {
+  document.documentElement.style.setProperty(`--active-color`, `${this.id}`);
+}
