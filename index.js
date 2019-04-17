@@ -18,8 +18,9 @@ function timeIntoWords(hours, minutes) {
 
   removeClasses(active);
 
-  if (minutes >= 33) hours++;
+  document.querySelector(".it-is").classList.add("active");
 
+  if (minutes >= 33) hours++;
   document.querySelector(`._${hours}`).classList.add("active");
 
   if (minutes >= 33 && minutes < 57)
@@ -60,12 +61,24 @@ function timeIntoWords(hours, minutes) {
 }
 
 tellTime();
-setInterval(tellTime, 60000);
+setInterval(tellTime, 1000);
 
-const buttons = document.querySelectorAll(".color");
+const buttons = document.querySelectorAll(".button");
 
 buttons.forEach(button => button.addEventListener("click", changeColor));
 
 function changeColor() {
-  document.documentElement.style.setProperty(`--active-color`, `${this.id}`);
+  document.documentElement.style.setProperty(
+    `--active-color`,
+    `${this.dataset.hue}`
+  );
+
+  function removeClasses(els) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList.remove("button-active");
+    }
+  }
+  removeClasses(buttons);
+
+  this.classList.add("button-active");
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous");
 
 :root {
-  --active-color: magenta;
+  --active-color: #f5f5f5;
 }
 
 html {
@@ -9,6 +9,14 @@ html {
   background: #111111;
   color: white;
   font-family: "Righteous", cursive;
+}
+
+.clock {
+  width: 40%;
+  margin: auto;
+  padding: 10vh 0 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .time {
@@ -24,23 +32,77 @@ html {
   text-shadow: 0 0 20px #f5f5f5;
 }
 
-.always-active {
-  color: var(--active-color);
-  font-size: 5vw;
-  transition: color 2s;
-  text-shadow: 0 0 20px #f5f5f5;
-}
-
-.clock {
-  width: 40%;
-  margin: auto;
-  padding: 10vh 0 0 0;
-  display: flex;
-  flex-direction: column;
-}
-
 .line {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.button {
+  border: 2px solid grey;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.button-active {
+  border: 5px solid #f5f5f5;
+  box-shadow: 0 0 20px #f5f5f5;
+}
+
+#red {
+  background: hsl(325, 100%, 50%);
+}
+
+#orange {
+  background: hsl(36, 100%, 50%);
+}
+
+#yellow {
+  background: hsl(61, 100%, 50%);
+}
+
+#green {
+  background: hsl(147, 100%, 50%);
+}
+
+#blue {
+  background: hsl(195, 100%, 50%);
+}
+
+#violet {
+  background: hsl(251, 100%, 50%);
+}
+
+#white {
+  background: #f5f5f5;
+}
+
+@media only screen and (max-width: 768px) {
+  .clock {
+    width: 70%;
+  }
+
+  .time {
+    color: #2d2d2b;
+    font-size: 7vw;
+    margin: auto;
+  }
+
+  .active {
+    color: var(--active-color);
+    font-size: 8vw;
+  }
+
+  .buttons {
+    width: 75%;
+  }
 }

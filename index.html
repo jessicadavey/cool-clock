@@ -10,7 +10,7 @@
   <body>
     <div class="clock">
       <div class="line">
-        <span class="time always-active">It is</span>
+        <span class="time it-is">It is</span>
         <span class="time half">Half</span>
         <span class="time ten">Ten</span>
       </div>
@@ -49,15 +49,21 @@
       </div>
     </div>
     <div class="buttons">
-      <button id="red" class="color">
-        Red
-      </button>
-      <button id="orange" class="color">Orange</button>
-      <button id="yellow" class="color">Yellow</button>
-      <button id="green" class="color">Green</button>
-      <button id="blue" class="color">Blue</button>
-      <button id="purple" class="color">Purple</button>
-      <button id="magenta" class="color">Magenta</button>
+      <button id="red" data-hue="hsl(325, 100%, 50%)" class="button"></button>
+      <button id="orange" data-hue="hsl(36, 100%, 50%)" class="button"></button>
+      <button id="yellow" data-hue="hsl(61, 100%, 50%)" class="button"></button>
+      <button id="green" data-hue="hsl(147, 100%, 50%)" class="button"></button>
+      <button id="blue" data-hue="hsl(195, 100%, 50%)" class="button"></button>
+      <button
+        id="violet"
+        data-hue="hsl(251, 100%, 50%)"
+        class="button"
+      ></button>
+      <button
+        id="white"
+        data-hue="#f5f5f5"
+        class="button button-active"
+      ></button>
     </div>
 
     <script src="index.js"></script>
