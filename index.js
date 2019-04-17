@@ -4,7 +4,6 @@ function tellTime() {
   let currentMinutes = currentTime.getMinutes();
 
   timeIntoWords(currentHours, currentMinutes);
-  console.log(currentHours, currentMinutes);
 }
 
 function timeIntoWords(hours, minutes) {
