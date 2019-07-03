@@ -1,4 +1,4 @@
-Word Clock
+## Word Clock
 
 [word clock screenshot](/word-clock.png)
 
