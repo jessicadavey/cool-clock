@@ -1,6 +1,5 @@
-# word-clock
+Word Clock
 
+[word clock screenshot](/word-clock.png)
 
-A word clock using JavaScript and CSS.
-
-Clock is mobile-responsive and auto-updating.
+An auto-updating clock that tells the time in words. It uses CSS variables, CSS transitions, and JavaScript for the color change buttons.
